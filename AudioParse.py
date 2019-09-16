@@ -5,19 +5,19 @@ import matplotlib.pyplot as plt
 import os
 
 
-def getlabels(path):
+def getlabels(audio_file_path):
     files = []
     # r=root, d=directories, f = files
-    for r, d, f in os.walk(path):
+    for r, d, f in os.walk(audio_file_path):
         for file in f:
             if '.wav' in file:
                 files.append(file)
     return files
 
 
-path = '/home/dgrfi/Documents/WavData/All/'
-
-print(path)
+audio_file_path = '/home/dgrfi/Documents/WavData/All/'
+audio_files = getlabels(audio_file_path)
+print(audio_files)
 
 #
 # getLabels(path)
